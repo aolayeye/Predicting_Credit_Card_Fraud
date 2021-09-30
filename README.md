@@ -45,3 +45,9 @@ The is an imbalanced dataset. The imbalance between classes is compensated using
       16.	ROC curve and Learning curve
       17.	Comparison of results and Model Selection
       18.	Visualization with seaborn and matplotlib
+      
+      
+ ##### Solution Workflow
+ ![Solution Workflow](https://user-images.githubusercontent.com/67847583/135495191-1aa5d8fa-985b-4471-a428-148dfc25366d.jpg)
+
+ 

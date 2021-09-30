@@ -158,4 +158,51 @@ Database ERD shows all tables used to store intermediate exploratory data analys
     classifier only achieved a 77% recall. 
     4. We would need a better understanding of the dataset to determine the best way to improve the 
     recall metric.
+###### Naive Model Results
+![Naive_Model_Results](https://user-images.githubusercontent.com/67847583/135501140-62325ff1-cb9d-486a-bf1b-f7057f82ce3b.png)
+
+#### The ROC-AUC Curve
+    1. ROC is a probability curve that plots True Positives and False Positives at different classification thresholds.
+    2. AUC - ROC curve is a performance measurement for a classifier at various classification thresholds.
+    3. Lowering the classification threshold classifies more items as positive, thus increasing both 
+    False Positives and True Positives. 
+    4. Increasing the classification threshold classifies more items as negative, thus increasing both 
+    False Negatives and True Negatives.
+    5. The AUC lets us find the optimal classification threshold that minimizes False Positives and 
+    False Negatives.
+    6. For our credit card classification problem, we would want a classification threshold that increases 
+    True Positives.
+    7. AUC measures the entire two-dimensional area underneath the entire ROC curve from (0,0) to (1,1).
+    8. AUC tells how much the model is capable of distinguishing between classes.
+    9. Higher the AUC, the better the model is at predicting 0 classes as 0 and 1 classes as 1.
+      
+#### The Learning Curve
+    1. The learning curve is the plot of the training/cross-validation error versus the sample size.
+    2. Learning curves show the relationship between training set size and the recall metric on the training 
+    and validation sets.
+    3. The learning curve detects whether the model has the high bias or high variance.
+    4. If the model suffers from high bias problem, as the sample size increases, training error will increase 
+    and the cross-validation error will decrease.
+    5. Training error and cross-validation error will end up close to each other but still at a high error rate.
+    6. If the model suffers from high variance, as the sample size increases, the training error will keep 
+    increasing and cross-validation error will keep decreasing.
+    7. Training error and cross-validation error will end up at a low training and cross-validation error rate.
+    
+#### Undersampling Model Results
+    1. By Undersampling our the majority class in our dataset, all classifiers achieved recall scores 
+    greater than 85% with the exception of the Support vector classifier.
+    2. The ROC Curve show that the Support Vector Classifier has the largest AUC at 0.979, while the 
+    decision tree classifier has the smallest AUC at 0.700
+    3. All undersampling curves show a fairly ideal learning curve. 
+    4. As the training size increases, training error and validation error generally reduces and end up
+    at a low rate.
+    
+###### Undersampling Results
+![Model_Performances_Undersampling](https://user-images.githubusercontent.com/67847583/135501466-10ca27a5-720d-4466-8ed4-a0e817050ba0.png)
+![ROC_Curve_Undersampling](https://user-images.githubusercontent.com/67847583/135501537-43d009c8-ee9d-46b6-a0b8-1ad3cf90473f.png)
+![Learning_Curve_Undersampling](https://user-images.githubusercontent.com/67847583/135501579-62b84901-98b4-41af-9c8f-4ed4c16b4948.png)
+
+ 
+
+ 
 

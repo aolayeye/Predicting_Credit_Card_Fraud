@@ -116,3 +116,104 @@ This project will utilize Jupyter notebook and the pandas library to perform dat
     2. Every team member will work in their individual branches.
     3. Team members will create pull requests which will be collectively approved in the slack channel.
     4. A designated team member will validate the pull request, and merge the request to the main branch.
+
+=======
+
+### Results
+#### Database ERD
+Database ERD shows all tables used to store intermediate exploratory data analysis results, and modelling results.
+
+![Segment_Three_ERD](https://user-images.githubusercontent.com/67847583/135500490-d9823b53-db7a-4666-a27d-881ff67df1f2.png)
+
+#### Exploratory Data Analysis
+##### Univariate Analysis:
+    1. Univariate plots show that the dataset is highly imbalanced. 
+    2. The pie chart shows an imbalance in the data, with only 0.17% of the total cases being fraudulent.
+    3. The univariate distribution plot of the time and amount feature show we have a dataset with some 
+    large outlier values for amount.
+    4. The time feature is distributed across two days
+    5. Bivariate plots show that the valid transaction class has a normal distribution shape across most 
+    of the features.
+    6. Conversely, the fraud class show long-tailed distribution across many of the features.
+##### Univariate Analysis Results    
+![Result_Pie_Chart](https://user-images.githubusercontent.com/67847583/135500614-43c9b5c4-9031-42fe-9cd5-a3d49b2146bd.png)
+![Univariate_Analysis_Time_Amount_Distribution](https://user-images.githubusercontent.com/67847583/135500685-aa03ae8f-e41b-41ee-b7de-6337d34eb2a0.png)
+
+##### Bivariate Analysis
+    1. It is important to note that  the ditribution plots do not have any physical interpretation because the features are extracted from PCA.
+    2. The Bivariate plots show that most of the features are normally distributed for valid transaction class. 
+    3. Conversely, the Fraud Class shows a wider spread as expected.
+    4. Some of the features show a left-skew distribution, while some show a right-skew distribution. 
+    
+##### Bivariate Analysis
+![Bivariate_Analysis_Distr_Plots](https://user-images.githubusercontent.com/67847583/135500780-d2672918-950c-4575-887e-419f0a2360de.png)
+
+
+#### Naive Model Results
+    1. While the naive logistic classifier accuracy is 100%, our classifier did not do an excellent job at 
+    predicting fraudulent transactions. 
+    2. With precision and recall of 0.84 and 0.62, we would need a better understanding of the dataset to 
+    determine the best way to improve the recall metric.
+    3. While the naive random forest classifier accuracy is 100%, and precision is 95%, our random forest 
+    classifier only achieved a 77% recall. 
+    4. We would need a better understanding of the dataset to determine the best way to improve the 
+    recall metric.
+###### Naive Model Results
+![Naive_Model_Results](https://user-images.githubusercontent.com/67847583/135501140-62325ff1-cb9d-486a-bf1b-f7057f82ce3b.png)
+
+#### The ROC-AUC Curve
+    1. ROC is a probability curve that plots True Positives and False Positives at different classification thresholds.
+    2. AUC - ROC curve is a performance measurement for a classifier at various classification thresholds.
+    3. Lowering the classification threshold classifies more items as positive, thus increasing both 
+    False Positives and True Positives. 
+    4. Increasing the classification threshold classifies more items as negative, thus increasing both 
+    False Negatives and True Negatives.
+    5. The AUC lets us find the optimal classification threshold that minimizes False Positives and 
+    False Negatives.
+    6. For our credit card classification problem, we would want a classification threshold that increases 
+    True Positives.
+    7. AUC measures the entire two-dimensional area underneath the entire ROC curve from (0,0) to (1,1).
+    8. AUC tells how much the model is capable of distinguishing between classes.
+    9. Higher the AUC, the better the model is at predicting 0 classes as 0 and 1 classes as 1.
+      
+#### The Learning Curve
+    1. The learning curve is the plot of the training/cross-validation error versus the sample size.
+    2. Learning curves show the relationship between training set size and the recall metric on the training 
+    and validation sets.
+    3. The learning curve detects whether the model has the high bias or high variance.
+    4. If the model suffers from high bias problem, as the sample size increases, training error will increase 
+    and the cross-validation error will decrease.
+    5. Training error and cross-validation error will end up close to each other but still at a high error rate.
+    6. If the model suffers from high variance, as the sample size increases, the training error will keep 
+    increasing and cross-validation error will keep decreasing.
+    7. Training error and cross-validation error will end up at a low training and cross-validation error rate.
+    
+#### Undersampling Model Results
+    1. By Undersampling our the majority class in our dataset, all classifiers achieved recall scores 
+    greater than 85% with the exception of the Support vector classifier.
+    2. The ROC Curve show that the Support Vector Classifier has the largest AUC at 0.979, while the 
+    decision tree classifier has the smallest AUC at 0.700
+    3. All undersampling curves show a fairly ideal learning curve. 
+    4. As the training size increases, training error and validation error generally reduces and end up
+    at a low rate.
+    
+###### Undersampling Results
+![Model_Performances_Undersampling](https://user-images.githubusercontent.com/67847583/135501466-10ca27a5-720d-4466-8ed4-a0e817050ba0.png)
+![ROC_Curve_Undersampling](https://user-images.githubusercontent.com/67847583/135501537-43d009c8-ee9d-46b6-a0b8-1ad3cf90473f.png)
+![Learning_Curve_Undersampling](https://user-images.githubusercontent.com/67847583/135501579-62b84901-98b4-41af-9c8f-4ed4c16b4948.png)
+
+ 
+#### Oversampling Model Results
+    1. By Oversampling the dataset, we ahieved recall scores greater than 85% for all classifiers. 
+       - The Random Forest classifier had the best accuracy of 99%
+    2. The ROC Curve show that the random forest classifier has the largest AUC at 0.987 while the 
+    decision tree classifier has the smallest AUC at 0.692
+    3. All oversampling learning curves show a fairly good fit. 
+    4. As the training size increases, training error and validation error generally reduces and end up at 
+    a low error rate
+    
+###### Comparing Model Performances
+![Comparing_Model_Results](https://user-images.githubusercontent.com/67847583/135501997-47bc77ce-492b-4d8d-9f8c-fcc8e681161e.png)
+![ROC_Curve_Oversampling](https://user-images.githubusercontent.com/67847583/135502050-73c9b460-9970-48cd-94af-122c1ee21880.png)
+![Learning_Curve_Oversampling](https://user-images.githubusercontent.com/67847583/135502083-4126e582-d58b-4eb9-bafa-61e9e8787301.png)
+

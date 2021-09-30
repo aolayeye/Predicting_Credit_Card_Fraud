@@ -116,4 +116,3 @@ This project will utilize Jupyter notebook and the pandas library to perform dat
     2. Every team member will work in their individual branches.
     3. Team members will create pull requests which will be collectively approved in the slack channel.
     4. A designated team member will validate the pull request, and merge the request to the main branch.
-

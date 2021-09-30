@@ -214,3 +214,48 @@ Database ERD shows all tables used to store intermediate exploratory data analys
 ![Comparing_Model_Results](https://user-images.githubusercontent.com/67847583/135501997-47bc77ce-492b-4d8d-9f8c-fcc8e681161e.png)
 ![ROC_Curve_Oversampling](https://user-images.githubusercontent.com/67847583/135502050-73c9b460-9970-48cd-94af-122c1ee21880.png)
 ![Learning_Curve_Oversampling](https://user-images.githubusercontent.com/67847583/135502083-4126e582-d58b-4eb9-bafa-61e9e8787301.png)
+
+
+
+#### Website
+[Link to Project Website](https://aolayeye.github.io/Machine_Learning_Project_Website/ "Link to Website]") 
+
+#### Dashboard
+[Link to Dashboard](https://public.tableau.com/shared/Y2584GGC6?:display_count=n&:origin=viz_share_link "Link to Dashboard") 
+
+
+#### Presentation
+[Link to Presentation](https://docs.google.com/presentation/d/1f263mkcfClpMU5olLJGY396gpVp0hSiV/edit?usp=sharing&ouid=110954296916953804309&rtpof=true&sd=true "Link to Presentation")
+
+### Summary
+The Dataset
+
+    1. The dataset used for this project has 284807 rows of credit card transactions. 
+    2. Exploratory data analysis reveal as expected that we have a highly imbalanced dataset.
+    3. Only 0.17% of all transaction are fraudulent.
+    4. While a large portion of the features have been anonymized with PCA, univariate and bivariate 
+    distribution plots show that the genuine transaction class has an approximately normal distribution across 
+    all features, and the fraud class was had a left skewed distribution for many of the features.
+
+Naive Models
+
+    1. While naive logistic regression and random forest had an accuracy of 100% and a precisions of 
+    84% and 96% respectively, both classifiers only managed recall scores of 62% and 77% respectively.
+    2. This means that, the classifiers would miss fraud transaction almost 25% of the time. 
+    3. This type of metric would cost an organization alot of money.
+
+Performance Metrics
+
+    1. Classifying transactions as fraud or genuine is an anomaly detection problem where only a small 
+    fraction are the anomalies, measuring model performance with the accuracy metric will not be ideal.
+    2. To capture fraud transactions we would require a classifier that has a high recall metric.
+    3. Recall is the ratio of of True Positives to the total of True Positives and False Positives
+
+Oversampling, Undersamling, ROC-AUC Curve, and the Learning Curve
+
+    1. To improve the recall score of the naive models, we employ oversampling and underampling.
+    2. With these methods, we achieved recall scores greater than 90%, and 85% for the undersampling 
+    and oversampling methods respectivelly.
+    3. While recall for random forest was highest at 95.9%, the classifier had a lower AUC value 
+    (91.5) than the logistic regression classifier with AUC of 92.1.
+    4. Analysis of the learning curve show that the logistic regression had a generally good fit.

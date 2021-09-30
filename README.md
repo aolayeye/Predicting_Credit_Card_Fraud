@@ -203,6 +203,16 @@ Database ERD shows all tables used to store intermediate exploratory data analys
 ![Learning_Curve_Undersampling](https://user-images.githubusercontent.com/67847583/135501579-62b84901-98b4-41af-9c8f-4ed4c16b4948.png)
 
  
-
- 
-
+#### Oversampling Model Results
+    1. By Oversampling the dataset, we ahieved recall scores greater than 85% for all classifiers. 
+       - The Random Forest classifier had the best accuracy of 99%
+    2. The ROC Curve show that the random forest classifier has the largest AUC at 0.987 while the 
+    decision tree classifier has the smallest AUC at 0.692
+    3. All oversampling learning curves show a fairly good fit. 
+    4. As the training size increases, training error and validation error generally reduces and end up at 
+    a low error rate
+    
+###### Comparing Model Performances
+![Comparing_Model_Results](https://user-images.githubusercontent.com/67847583/135501997-47bc77ce-492b-4d8d-9f8c-fcc8e681161e.png)
+![ROC_Curve_Oversampling](https://user-images.githubusercontent.com/67847583/135502050-73c9b460-9970-48cd-94af-122c1ee21880.png)
+![Learning_Curve_Oversampling](https://user-images.githubusercontent.com/67847583/135502083-4126e582-d58b-4eb9-bafa-61e9e8787301.png)

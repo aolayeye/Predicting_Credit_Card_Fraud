@@ -49,7 +49,8 @@ The is an imbalanced dataset. The imbalance between classes is compensated using
       
       
  ##### Solution Workflow
- ![Solution Workflow](https://user-images.githubusercontent.com/67847583/135495191-1aa5d8fa-985b-4471-a428-148dfc25366d.jpg)
+ ![Solution Workflow](https://user-images.githubusercontent.com/67847583/157993520-931aed05-c979-4eb8-bfd7-a1f8942b3d23.jpg)
+
 
  ### Technology
 ##### Logistic Regression
